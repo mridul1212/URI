@@ -1,17 +1,16 @@
 #include <iostream>
+#include<stdio.h>
+#include<math.h>
 
 using namespace std;
 
 int main()
 {
-    double a, n=0.0;
+    double a,b,c,d;
     cin>>a;
-    while(a--)
-    {
-        n+=6.0;
-        n=1.0/n;
-    }
-    n+=3.0;
-    printf("%.10lf\n",n);
+    b= (1+sqrt(5))/2.0;
+    c = (1-sqrt(5))/2.0;
+    d= (pow(b,a))-(pow(c,a))/sqrt(5);
+    printf("%.1lf\n",d);
     return 0;
 }
