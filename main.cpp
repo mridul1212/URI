@@ -4,10 +4,14 @@ using namespace std;
 
 int main()
 {
-   int a,b;
-   float c=1;
-   cin>>a>>b;
-   c =(float)a/b;
-   printf("%.2f\n",c);
+    double a, n=0.0;
+    cin>>a;
+    while(a--)
+    {
+        n+=6.0;
+        n=1.0/n;
+    }
+    n+=3.0;
+    printf("%.10lf\n",n);
     return 0;
 }
