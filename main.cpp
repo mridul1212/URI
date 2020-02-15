@@ -4,13 +4,22 @@ using namespace std;
 
 int main()
 {
-    int unsigned long a,b;
-    while(cin>>a>>b)
-    {
-        if(a==0&&b==0)
-            break;
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a-b==0)
+        cout<<"S"<<endl;
+    else  if(c-b==0)
+        cout<<"S"<<endl;
+    else  if(a-c==0)
+        cout<<"S"<<endl;
+    else  if((a+c)-b==0)
+        cout<<"S"<<endl;
+    else  if((a+b)-c==0)
+        cout<<"S"<<endl;
+    else  if((a+b)-c==0)
+        cout<<"S"<<endl;
         else
-            cout<<a*b<<endl;
-    }
+            cout<<"N"<<endl;
+
     return 0;
 }
