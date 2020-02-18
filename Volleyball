@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    char a[20];
+    int a1,a2,a3,b1,b2,b3,c=0,d=0,e=0,c1=0,c2=0,c3=0;
+    float p1,p2,p3;
+    scanf("%d",&n);
+    while(n--)
+    {
+        scanf("%s",a);
+        scanf("%d %d %d %d %d %d",&a1,&a2,&a3,&b1,&b2,&b3);
+        c+=a1;
+        d+=a2;
+        e+=a3;
+        c1+=b1;
+        c2+=b2;
+        c3+=b3;
+    }
+    p1=(100.0/c)*c1;
+    p2=(100.0/d)*c2;
+    p3=(100.0/e)*c3;
+    printf("Pontos de Saque: %.2f %%.\n",p1);
+    printf("Pontos de Bloqueio: %.2f %%.\n",p2);
+    printf("Pontos de Ataque: %.2f %%.\n",p3);
+    return 0;
+}
