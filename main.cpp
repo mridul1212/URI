@@ -1,25 +1,29 @@
 #include <iostream>
-
+#include<algorithm>
 using namespace std;
 
 int main()
 {
-    int a,b,c;
-    cin>>a>>b>>c;
-    if(a-b==0)
-        cout<<"S"<<endl;
-    else  if(c-b==0)
-        cout<<"S"<<endl;
-    else  if(a-c==0)
-        cout<<"S"<<endl;
-    else  if((a+c)-b==0)
-        cout<<"S"<<endl;
-    else  if((a+b)-c==0)
-        cout<<"S"<<endl;
-    else  if((a+b)-c==0)
-        cout<<"S"<<endl;
-        else
-            cout<<"N"<<endl;
-
+    int n;
+    float a;
+    cin>>n;
+    while(n--)
+    {
+        string str;
+        cin>>str;
+        cin>>a;
+        float ar[7],sum=0;
+        for(int i=0;i<7;i++)
+        {
+            cin>>ar[i];
+            sum+=ar[i];
+        }
+        sort(ar,ar+7);
+        sum=sum-ar[0];
+        sum=sum-ar[6];
+        sum=sum*a;
+        cout<<str<<" ";
+        printf("%.2f\n",sum);
+    }
     return 0;
 }
